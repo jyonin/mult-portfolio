@@ -168,8 +168,8 @@ document.addEventListener('DOMContentLoaded', () => {
     if (e.key === 'Escape' && contactModal.classList.contains('open')) closeContact();
   });
 
-  // 폼 제출 → mailto 구성
-  contactForm?.addEventListener('submit', (e) => {
+  // 폼 제출 → Formspree
+  contactForm?.addEventListener('submit', async (e) => {
     e.preventDefault();
     const name    = document.getElementById('cf-name').value.trim();
     const company = document.getElementById('cf-company').value.trim();
@@ -178,11 +178,33 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (!name || !email || !message) return;
 
-    const subject = encodeURIComponent(`[포트폴리오 문의] ${name}${company ? ` · ${company}` : ''}`);
-    const body    = encodeURIComponent(
-      `안녕하세요, 김지현님.\n\n${message}\n\n---\n보낸 분: ${name}${company ? ` (${company})` : ''}\n회신 메일: ${email}`
-    );
-    window.location.href = `mailto:delfi_chacha@naver.com?subject=${subject}&body=${body}`;
+    const submitBtn = contactForm.querySelector('.contact-form__submit');
+    submitBtn.disabled = true;
+    submitBtn.textContent = '전송 중...';
+
+    try {
+      const res = await fetch('https://formspree.io/f/xdavblwg', {
+        method: 'POST',
+        headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name, company, email, message })
+      });
+
+      if (res.ok) {
+        submitBtn.textContent = '✓ 전송 완료';
+        contactForm.reset();
+        setTimeout(() => {
+          closeContact();
+          submitBtn.disabled = false;
+          submitBtn.textContent = '메일 보내기 →';
+        }, 1800);
+      } else {
+        throw new Error();
+      }
+    } catch {
+      submitBtn.disabled = false;
+      submitBtn.textContent = '전송 실패 — 다시 시도해주세요';
+      setTimeout(() => { submitBtn.textContent = '메일 보내기 →'; }, 2500);
+    }
   });
 
   /* ── 07. 벤토 이미지 팝업 ── */
