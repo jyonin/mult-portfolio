@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MULT. — One identity, many forms.</title>
+  <meta name="description" content="AI 생성 이미지로 음식 브랜드 비주얼을 만드는 디자이너, 김지현의 포트폴리오입니다.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Noto+Sans+KR:wght@400;500;700&family=DM+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/png" href="images/logo아트보드 2.png">
+</head>
+<body>
+
+  <!-- ── NAV ── -->
+  <nav class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="#" class="nav__logo logo-lockup">
+        <span class="logo-lockup__inner">
+          <img src="images/logo대지 1.png" class="logo-lockup__text" alt="MULT">
+          <img src="images/logo아트보드 2.png" class="logo-lockup__mark" alt="">
+        </span>
+      </a>
+
+      <!-- 데스크탑 링크 -->
+      <ul class="nav__links">
+        <li><a href="#food-ai">Food AI</a></li>
+        <li><a href="#process">Process</a></li>
+        <li><a href="#brand">Brand</a></li>
+        <li><a href="#detail">Cases</a></li>
+        <li><a href="#about">About</a></li>
+      </ul>
+
+      <div class="nav__right">
+        <button class="nav__contact-btn btn btn--primary js-open-contact">이야기 나눠요</button>
+        <button class="nav__hamburger" id="navToggle" aria-label="메뉴 열기" aria-expanded="false">
+          <span class="nav__hamburger-line"></span>
+          <span class="nav__hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 모바일 메뉴 패널 (Smalls 스타일) -->
+  <div class="nav-panel" id="navPanel" aria-hidden="true">
+    <div class="nav-panel__inner">
+      <div class="nav-panel__top">
+        <a href="#" class="nav-panel__logo logo-lockup">
+          <span class="logo-lockup__inner">
+            <img src="images/logo대지 1.png" class="logo-lockup__text" alt="MULT">
+            <img src="images/logo아트보드 2.png" class="logo-lockup__mark" alt="">
+          </span>
+        </a>
+        <button class="nav-panel__close" id="navClose" aria-label="메뉴 닫기">✕</button>
+      </div>
+
+      <ul class="nav-panel__links">
+        <li><a href="#food-ai" class="nav-panel__link">Food AI <span>→</span></a></li>
+        <li><a href="#process" class="nav-panel__link">Process <span>→</span></a></li>
+        <li><a href="#brand" class="nav-panel__link">Brand visual <span>→</span></a></li>
+        <li><a href="#detail" class="nav-panel__link">Cases <span>→</span></a></li>
+        <li><a href="#vibe" class="nav-panel__link">Vibe coding <span>→</span></a></li>
+        <li><a href="#about" class="nav-panel__link">About <span>→</span></a></li>
+      </ul>
+
+      <button class="nav-panel__cta btn btn--primary js-open-contact">이야기 나눠요</button>
+
+      <div class="nav-panel__footer">
+        <div>
+          <p class="nav-panel__footer-label">Email</p>
+          <a href="mailto:delfi_chacha@naver.com">delfi_chacha@naver.com</a>
+        </div>
+        <div>
+          <p class="nav-panel__footer-label">GitHub</p>
+          <a href="https://github.com" target="_blank">jihyun-portfolio</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 딤 오버레이 -->
+  <div class="nav-overlay" id="navOverlay"></div>
+
+  <main>
+
+    <!-- ── 01. HERO ── -->
+    <section class="hero" id="hero">
+
+      <!-- 에디토리얼 스테이지 -->
+      <div class="hero__stage">
+        <h1 class="hero__display">
+          <span class="hero__display-intro">만나서 반갑습니다!</span>
+          <span class="hero__display-main">요즘은 이렇게,<br>작업합니다</span>
+        </h1>
+        <span class="hero__position">AI Visual Designer · Food Branding</span>
+        <p class="hero__bio">
+          브랜드 디자인을 8년째 하고 있어요.<br>
+          요즘은 AI로 이미지 만드는 일에 푹 빠져있어요.<br>
+          카메라 없이도, 같은 제품을 수십 가지 모습으로 만들어냅니다.<br>
+          기획부터 생성, 보정까지 — 한 사람이 끝까지 책임집니다.
+        </p>
+      </div>
+
+
+    </section>
+
+    <!-- ── 02. FOOD AI ── -->
+    <section class="section food-ai" id="food-ai">
+      <div class="container">
+        <header class="section__header">
+          <p class="eyebrow">Core skill — 핵심 역량</p>
+          <h2 class="section__title">같은 제품,<br><mark class="hl">무한한 연출</mark></h2>
+          <p class="section__desc">
+            제품의 외형을 고정한 채 각도, 배경, 조명, 상황을 바꿔가며 생성합니다.<br>
+            촬영 없이도 하나의 제품을 수십 가지 컷으로 뽑아낼 수 있습니다.
+          </p>
+        </header>
+
+        <!-- Before / After 슬라이더 -->
+        <div class="ba-wrap">
+          <p class="ba-label ba-label--left">레퍼런스</p>
+          <p class="ba-label ba-label--right">AI 생성 결과</p>
+          <div class="ba-slider" id="baSlider">
+            <div class="ba-before">
+              <img src="images/mudscone.png" alt="레퍼런스 이미지 — Mud Scone">
+            </div>
+            <div class="ba-after">
+              <img src="images/pastane.png" alt="AI 생성 결과 — Pastane">
+            </div>
+            <div class="ba-handle" id="baHandle">
+              <div class="ba-handle__line"></div>
+              <div class="ba-handle__btn">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                  <path d="M5 8H11M5 8L3 6M5 8L3 10M11 8L13 6M11 8L13 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+              </div>
+            </div>
+            <input type="range" class="ba-range" id="baRange" min="0" max="100" value="50" aria-label="Before/After 슬라이더">
+          </div>
+        </div>
+
+        <!-- 프롬프트 박스 -->
+        <div class="prompt-box">
+          <p class="prompt-box__label">Prompt structure — 외형 고정 프롬프트</p>
+          <pre class="prompt-box__code"><span class="pt-subject">scone, top-angle 45°, natural diffused light from left,</span>
+<span class="pt-texture">rough rustic texture, golden-brown crust, visible fiber flakes,</span>
+<span class="pt-bg">linen fabric background, off-white surface,</span>
+<span class="pt-style">editorial food photography, soft shadow, no props,</span>
+<span class="pt-tech">--ar 4:3 --style raw --v 6</span></pre>
+          <p class="prompt-box__note">↑ 외형 구조는 고정하고, 각도·배경·상황만 바꿔 반복 생성 → 같은 제품의 다양한 씬을 일관된 퀄리티로 뽑아냅니다</p>
+        </div>
+
+        <!-- 벤토 갤러리 — 같은 제품 다양한 연출 -->
+        <p class="gallery-label">같은 제품 · 다양한 연출 — AI 생성 이미지</p>
+        <div class="bento-grid">
+          <!-- ① 상단 대형 (col 1-2, row 1-2) -->
+          <figure class="bento-item bi-large bi-large--tl">
+            <div class="bento-img" style="background-image:url('images/mudscone_mood (1).png')"></div>
+            <figcaption>스튜디오 · 소품 연출</figcaption>
+          </figure>
+          <!-- ② 상단 소형 상 (col 3, row 1) — auto -->
+          <figure class="bento-item bi-sm">
+            <div class="bento-img" style="background-image:url('images/mudscone_mood (5).png')"></div>
+            <figcaption>클로즈업 · 단면</figcaption>
+          </figure>
+          <!-- ③ 상단 소형 하 (col 3, row 2) — auto -->
+          <figure class="bento-item bi-sm">
+            <div class="bento-img" style="background-image:url('images/mudscone_mood (2).png')"></div>
+            <figcaption>스타일링 · 소품컷</figcaption>
+          </figure>
+          <!-- ④ 상단 우측 세로 (col 4, row 1-2) -->
+          <figure class="bento-item bi-tall bi-tall--tr">
+            <div class="bento-img" style="background-image:url('images/mudscone_mood (8).png')"></div>
+            <figcaption>탑뷰 · 야외 피크닉</figcaption>
+          </figure>
+          <!-- ⑤ 하단 좌측 세로 (col 1, row 3-4) -->
+          <figure class="bento-item bi-tall bi-tall--bl">
+            <div class="bento-img" style="background-image:url('images/mudscone_mood (3).png')"></div>
+            <figcaption>라이프스타일 · 카페</figcaption>
+          </figure>
+          <!-- ⑥ 하단 중앙 대형 (col 2-3, row 3-4) -->
+          <figure class="bento-item bi-large bi-large--bc">
+            <div class="bento-img" style="background-image:url('images/mudscone_mood (7).png')"></div>
+            <figcaption>브랜드포스터 · 카피</figcaption>
+          </figure>
+          <!-- ⑦ 하단 우측 소형 상 (col 4, row 3) -->
+          <figure class="bento-item bi-sm bi-sm--br1">
+            <div class="bento-img" style="background-image:url('images/mudscone_mood (4).png')"></div>
+            <figcaption>피크닉 · 감성 연출</figcaption>
+          </figure>
+          <!-- ⑧ 하단 우측 소형 하 (col 4, row 4) -->
+          <figure class="bento-item bi-sm bi-sm--br2">
+            <div class="bento-img" style="background-image:url('images/mudscone_mood (6).png?v=2')"></div>
+            <figcaption>모델컷 · 브랜드</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── 03. PROCESS ── -->
+    <section class="section process" id="process">
+      <div class="container">
+        <header class="section__header">
+          <p class="eyebrow">How I work</p>
+          <h2 class="section__title">레퍼런스 수집부터<br>완성 디자인까지 <mark class="hl">직접</mark> 합니다</h2>
+        </header>
+
+        <!-- 아크 + 텍스트 동일 SVG 좌표계 — 뷰포트와 함께 스케일 -->
+        <div class="process-cascade-wrap">
+          <svg class="process-cascade-svg" viewBox="0 0 1100 800" xmlns="http://www.w3.org/2000/svg">
+
+            <!-- ── STEP 1 + arc to step 2 ── -->
+            <g class="ps-group">
+              <circle cx="8" cy="38" r="5" fill="#1A1A1A"/>
+              <path d="M 8,38 C 30,-70 260,-70 283,198" class="ps-arc"/>
+              <text x="8"  y="76"  class="ps-num">(01)</text>
+              <text x="8"  y="120" class="ps-title">레퍼런스 분석</text>
+              <circle cx="14" cy="160" r="3.5" fill="none" stroke="#888888" stroke-width="1"/>
+              <text x="28"  y="165" class="ps-item">무드 레퍼런스 수집</text>
+              <circle cx="14" cy="190" r="3.5" fill="none" stroke="#888888" stroke-width="1"/>
+              <text x="28"  y="195" class="ps-item">구도·조명 분석</text>
+              <circle cx="14" cy="220" r="3.5" fill="none" stroke="#888888" stroke-width="1"/>
+              <text x="28"  y="225" class="ps-item">프롬프트 방향 설정</text>
+            </g>
+
+            <!-- ── STEP 2 + arc to step 3 ── -->
+            <g class="ps-group">
+              <circle cx="283" cy="198" r="5" fill="#1A1A1A"/>
+              <path d="M 283,198 C 305,90 535,90 558,358" class="ps-arc"/>
+              <text x="283" y="236" class="ps-num">(02)</text>
+              <text x="283" y="280" class="ps-title">AI 이미지 생성</text>
+              <circle cx="289" cy="320" r="3.5" fill="none" stroke="#888888" stroke-width="1"/>
+              <text x="303" y="325" class="ps-item">프롬프트 최적화</text>
+              <circle cx="289" cy="350" r="3.5" fill="none" stroke="#888888" stroke-width="1"/>
+              <text x="303" y="355" class="ps-item">다각도 이미지 생성</text>
+              <circle cx="289" cy="380" r="3.5" fill="none" stroke="#888888" stroke-width="1"/>
+              <text x="303" y="385" class="ps-item">방향성 결정</text>
+            </g>
+
+            <!-- ── STEP 3 + arc to step 4 ── -->
+            <g class="ps-group">
+              <circle cx="558" cy="358" r="5" fill="#1A1A1A"/>
+              <path d="M 558,358 C 580,248 810,248 833,518" class="ps-arc"/>
+              <text x="558" y="396" class="ps-num">(03)</text>
+              <text x="558" y="440" class="ps-title">PS 파인튜닝</text>
+              <circle cx="564" cy="480" r="3.5" fill="none" stroke="#888888" stroke-width="1"/>
+              <text x="578" y="485" class="ps-item">그림자·색온도 보정</text>
+              <circle cx="564" cy="510" r="3.5" fill="none" stroke="#888888" stroke-width="1"/>
+              <text x="578" y="515" class="ps-item">텍스처 강화</text>
+              <circle cx="564" cy="540" r="3.5" fill="none" stroke="#888888" stroke-width="1"/>
+              <text x="578" y="545" class="ps-item">불필요 요소 제거</text>
+            </g>
+
+            <!-- ── STEP 4 ── -->
+            <g class="ps-group">
+              <circle cx="833" cy="518" r="5" fill="#1A1A1A"/>
+              <text x="833" y="556" class="ps-num">(04)</text>
+              <text x="833" y="600" class="ps-title">브랜드 통합</text>
+              <circle cx="839" cy="640" r="3.5" fill="none" stroke="#888888" stroke-width="1"/>
+              <text x="853" y="645" class="ps-item">썸네일·상세페이지 배치</text>
+              <circle cx="839" cy="670" r="3.5" fill="none" stroke="#888888" stroke-width="1"/>
+              <text x="853" y="675" class="ps-item">SNS 채널 최적화</text>
+              <circle cx="839" cy="700" r="3.5" fill="none" stroke="#888888" stroke-width="1"/>
+              <text x="853" y="705" class="ps-item">브랜드 톤 일관성</text>
+            </g>
+
+          </svg>
+        </div>
+
+        <!-- PS 파인튜닝 디테일 -->
+        <div class="ps-detail">
+          <div class="ps-detail__screen">
+            <div class="ps-detail__topbar">
+              <span class="ps-dot ps-dot--r"></span>
+              <span class="ps-dot ps-dot--y"></span>
+              <span class="ps-dot ps-dot--g"></span>
+              <span class="ps-detail__filename">scone_final_v3.psd</span>
+            </div>
+            <div class="ps-detail__layers">
+              <div class="ps-layer ps-layer--1"><span class="ps-layer__icon">◈</span> Color Grading</div>
+              <div class="ps-layer ps-layer--2"><span class="ps-layer__icon">◈</span> Shadow Rebuild</div>
+              <div class="ps-layer ps-layer--3"><span class="ps-layer__icon">◈</span> Texture Enhance</div>
+              <div class="ps-layer ps-layer--4"><span class="ps-layer__icon">◈</span> AI Generated Base</div>
+            </div>
+          </div>
+          <div class="ps-detail__caption">
+            <h4>Photoshop 파인튜닝 디테일</h4>
+            <p>AI 결과물을 그대로 쓰지 않습니다. 그림자 방향, 텍스처 밀도, 색온도를 포토샵에서 직접 조정해 실제 촬영본과 가까운 톤으로 맞춥니다.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ── 04. BRAND VISUAL ── -->
+    <section class="section brand" id="brand">
+      <div class="container">
+        <header class="section__header">
+          <p class="eyebrow">Visual consistency</p>
+          <h2 class="section__title">한 브랜드처럼 보이도록<br>비주얼 <mark class="hl">언어를 통일</mark>합니다</h2>
+          <p class="section__desc">어떤 채널에 올리든 같은 브랜드로 인식되도록,<br>썸네일, 상세페이지, SNS 피드를 하나의 톤으로 묶습니다.</p>
+        </header>
+
+        <div class="brand-layout">
+
+          <!-- 좌측: 컬러 시스템 -->
+          <div class="color-system">
+            <p class="color-system__label">Brand color system</p>
+            <div class="color-chips">
+              <div class="color-chip" style="--chip-color:#A8A83C"><span class="chip-hex">#A8A83C</span><span class="chip-name">올리브 세이지</span></div>
+              <div class="color-chip" style="--chip-color:#F08A14"><span class="chip-hex">#F08A14</span><span class="chip-name">웜 오렌지</span></div>
+              <div class="color-chip" style="--chip-color:#E84E22"><span class="chip-hex">#E84E22</span><span class="chip-name">테라코타</span></div>
+              <div class="color-chip" style="--chip-color:#B4D2D2"><span class="chip-hex">#B4D2D2</span><span class="chip-name">쿨 민트</span></div>
+              <div class="color-chip" style="--chip-color:#D2C3B4"><span class="chip-hex">#D2C3B4</span><span class="chip-name">웜 크림</span></div>
+            </div>
+          </div>
+
+          <!-- 우측: SNS 피드 목업 -->
+          <div class="feed-mock">
+            <div class="feed-mock__header">
+              <div class="feed-mock__avatar"></div>
+              <div class="feed-mock__info">
+                <p class="feed-mock__name">@mudscone</p>
+                <p class="feed-mock__sub">Instagram Feed Preview</p>
+              </div>
+            </div>
+            <div class="feed-grid">
+              <div class="feed-cell" style="background-image:url('images/instagram (1).png')"><span class="feed-cell__tag">라이프스타일</span></div>
+              <div class="feed-cell" style="background-image:url('images/instagram (2).png')"><span class="feed-cell__tag">카드뉴스</span></div>
+              <div class="feed-cell" style="background-image:url('images/instagram (3).png')"><span class="feed-cell__tag">제품컷 · 망고</span></div>
+              <div class="feed-cell" style="background-image:url('images/instagram (4).png')"><span class="feed-cell__tag">단면컷 · 초콜릿</span></div>
+              <div class="feed-cell" style="background-image:url('images/instagram (5).png')"><span class="feed-cell__tag">브랜드뉴스</span></div>
+              <div class="feed-cell" style="background-image:url('images/instagram (6).png')"><span class="feed-cell__tag">제품라인업</span></div>
+              <div class="feed-cell" style="background-image:url('images/instagram (7).png')"><span class="feed-cell__tag">인포그래픽</span></div>
+              <div class="feed-cell" style="background-image:url('images/instagram (8).png')"><span class="feed-cell__tag">6월 프로그램</span></div>
+              <div class="feed-cell" style="background-image:url('images/instagram (9).png')"><span class="feed-cell__tag">브랜드컷</span></div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ── 05. 상세페이지 케이스 ── -->
+    <section class="section detail" id="detail">
+      <div class="container">
+        <header class="section__header">
+          <p class="eyebrow">E-commerce application</p>
+          <h2 class="section__title">기획하고, 생성하고,<br><mark class="hl">배치</mark>까지 한 번에</h2>
+          <p class="section__desc">소구포인트를 먼저 정의하고 — AI로 이미지를 만들고 — 어느 섹션에 붙일지까지 설계합니다.</p>
+        </header>
+
+        <!-- 원형 다이어그램 — 기획·디자인·마케팅 모먼트 -->
+        <div class="flow-diagram-wrap">
+          <!--
+            레이아웃 공식 (레퍼런스 동일):
+            inner_r=76, padding=20 → pill_rx=96, pill_h=192
+            C1 cx = pill_x + rx = 204+96 = 300
+            C2 cx = 300 + 2*76   = 452
+            C3 cx = 452 + 2*76   = 604   (right edge 680 = pill_right 700 - padding 20 ✓)
+          -->
+          <svg class="flow-diagram-svg" viewBox="0 0 1000 280" xmlns="http://www.w3.org/2000/svg">
+            <!--
+              총 콘텐츠 폭 944px → viewBox 1000 기준 좌우 여백 각 28px
+              white circle r=76, gap=24 → 두 원 중심 간격 176
+              c1=324, c2=500, c3=676
+              pill: x=228, width=544 (padding 20 × 2 + 76×2×3 + 24×2 = 544)
+              left_cx=116, right_cx=884
+            -->
+
+            <!-- ① 왼쪽 블랙 원 (cx=116) -->
+            <circle cx="116" cy="140" r="88" fill="#1A1A1A"/>
+            <text x="116" y="134" text-anchor="middle" class="fd-outer-title">클라이언트</text>
+            <text x="116" y="154" text-anchor="middle" class="fd-outer-sub">브랜드 의뢰</text>
+
+            <!-- 연결선 -->
+            <line x1="204" y1="140" x2="228" y2="140" stroke="#1A1A1A" stroke-width="1.5"/>
+
+            <!-- ② 캡슐: x=228, width=544, rx=96, height=192 -->
+            <rect x="228" y="44" width="544" height="192" rx="96" fill="#1A1A1A"/>
+
+            <!-- 원 1 — 기획적 (cx=324) -->
+            <circle cx="324" cy="140" r="76" fill="#ffffff"/>
+            <text x="324" y="120" text-anchor="middle" class="fd-moment">PLANNING</text>
+            <text x="324" y="142" text-anchor="middle" class="fd-inner-title">기획적</text>
+            <text x="324" y="161" text-anchor="middle" class="fd-inner-sub">소구포인트 설정</text>
+
+            <!-- 원 2 — 디자인적 (cx=500) -->
+            <circle cx="500" cy="140" r="76" fill="#ffffff"/>
+            <text x="500" y="114" text-anchor="middle" class="fd-moment">DESIGN</text>
+            <text x="500" y="136" text-anchor="middle" class="fd-inner-title">디자인적</text>
+            <text x="500" y="155" text-anchor="middle" class="fd-inner-sub">AI 이미지 생성</text>
+            <text x="500" y="171" text-anchor="middle" class="fd-inner-sub">PS 파인튜닝</text>
+
+            <!-- 원 3 — 마케팅적 (cx=676) -->
+            <circle cx="676" cy="140" r="76" fill="#ffffff"/>
+            <text x="676" y="120" text-anchor="middle" class="fd-moment">MARKETING</text>
+            <text x="676" y="142" text-anchor="middle" class="fd-inner-title">마케팅적</text>
+            <text x="676" y="161" text-anchor="middle" class="fd-inner-sub">섹션별 배치</text>
+
+            <!-- 화살표 -->
+            <line x1="772" y1="140" x2="792" y2="140" stroke="#1A1A1A" stroke-width="1.5"/>
+            <polygon points="780,134 792,140 780,146" fill="#1A1A1A"/>
+
+            <!-- ③ 오른쪽 블랙 원 (cx=884) -->
+            <circle cx="884" cy="140" r="88" fill="#1A1A1A"/>
+            <text x="884" y="134" text-anchor="middle" class="fd-outer-title">완성</text>
+            <text x="884" y="154" text-anchor="middle" class="fd-outer-sub">페이지</text>
+
+          </svg>
+        </div>
+
+        <!-- 사고 방식 텍스트 카드 -->
+        <div class="think-grid">
+
+          <div class="think-card">
+            <p class="think-card__num">01</p>
+            <p class="think-card__en">PLANNING</p>
+            <h3 class="think-card__title">핵심 소구점을 먼저 정합니다</h3>
+            <ul class="think-card__list">
+              <li>클라이언트와 함께 제품의 강점을 1~2가지로 좁히고, 그 메시지에 맞는 이미지 방향을 정합니다</li>
+              <li>방향이 정해져야 프롬프트도, 톤도 흔들리지 않습니다</li>
+            </ul>
+          </div>
+
+          <div class="think-card">
+            <p class="think-card__num">02</p>
+            <p class="think-card__en">DESIGN</p>
+            <h3 class="think-card__title">소구점에 맞는 이미지를 제작합니다</h3>
+            <ul class="think-card__list">
+              <li>앵글, 배경, 조명, 상황을 프롬프트로 정밀하게 설계합니다</li>
+              <li>AI 생성 후 그림자 방향, 텍스처 밀도, 색온도를 포토샵에서 보정합니다</li>
+              <li>결과물이 실사처럼 보일 때까지 파인튜닝을 반복합니다</li>
+            </ul>
+          </div>
+
+          <div class="think-card">
+            <p class="think-card__num">03</p>
+            <p class="think-card__en">MARKETING</p>
+            <h3 class="think-card__title">완성된 이미지를 섹션별로 배치합니다</h3>
+            <ul class="think-card__list">
+              <li>메인 배너는 탑뷰 컷, 상세 섹션은 재료·단면 클로즈업으로 구분합니다</li>
+              <li>SNS 피드는 라이프스타일 컷을 채널별 비율로 조정해 사용합니다</li>
+              <li>같은 소스 이미지라도 섹션마다 다른 크롭과 톤으로 다시 작업합니다</li>
+            </ul>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ── 06. VIBE CODING ── -->
+    <section class="section vibe" id="vibe">
+      <div class="container">
+        <header class="section__header">
+          <p class="eyebrow eyebrow--light">Technical skill</p>
+          <h2 class="section__title section__title--light">바이브 코딩으로<br>이 포트폴리오를 <mark class="hl">직접 만들었습니다</mark></h2>
+          <p class="section__desc section__desc--light">
+            디자이너가 코드를 직접 씁니다. 이 포트폴리오 웹사이트 자체가 그 결과물입니다.
+          </p>
+        </header>
+
+        <!-- 터미널 데모 -->
+        <div class="terminal">
+          <div class="terminal__topbar">
+            <span class="t-dot t-dot--r"></span>
+            <span class="t-dot t-dot--y"></span>
+            <span class="t-dot t-dot--g"></span>
+            <span class="terminal__url">지현portfolio.github.io</span>
+          </div>
+          <div class="terminal__body">
+            <div class="terminal__prompt-block">
+              <p class="terminal__label">Me → Claude</p>
+              <p class="terminal__text">"Before/After 슬라이더 섹션 만들어줘. 드래그로 레퍼런스랑 AI 생성 결과를 비교할 수 있게. 핸들은 원형으로."</p>
+            </div>
+            <div class="terminal__divider"></div>
+            <div class="terminal__prompt-block">
+              <p class="terminal__label terminal__label--green">Claude → Result</p>
+              <p class="terminal__text terminal__text--code">/* ba-slider: range input + clip-path 방식으로 구현<br>&nbsp;&nbsp; 드래그·터치 이벤트 모두 지원 */<br>.ba-after &#123; clip-path: inset(0 0 0 <span class="t-hl">var(--pos)</span>); &#125;</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- GitHub 뱃지 -->
+        <div class="github-badge">
+          <div class="github-badge__left">
+            <svg class="github-badge__icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.167 6.839 9.49.5.09.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.342-3.369-1.342-.454-1.155-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0112 6.836c.85.004 1.705.114 2.504.336 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.741 0 .267.18.577.688.48C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg>
+            <div>
+              <p class="github-badge__repo">jihyun-portfolio</p>
+              <p class="github-badge__sub">GitHub Pages · 배포 완료</p>
+            </div>
+          </div>
+          <a href="https://github.com" target="_blank" rel="noopener" class="btn btn--outline">View Source</a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ── 07. ABOUT ── -->
+    <section class="section about" id="about">
+      <div class="container">
+        <div class="about__inner">
+          <div class="about__left">
+            <p class="eyebrow">About me</p>
+            <h2 class="about__name">김지현</h2>
+            <p class="about__role">AI Visual Designer · Food Branding</p>
+            <p class="about__bio">
+              패키지, 캐릭터, 매거진, 굿즈 등 F&amp;B 브랜드의 다양한 비주얼을 8년간 만들어왔습니다.<br>
+              지금은 <mark class="hl">AI 이미지 생성을 작업 과정에 들여</mark>, 기획·생성·보정을 직접 완결하는 방식으로 일합니다.<br><br>
+              소구포인트 설정부터 최종 비주얼 납품까지, 외주 없이 혼자 진행합니다.
+            </p>
+            <div class="tool-stack">
+              <span class="tool-chip">Midjourney</span>
+              <span class="tool-chip">Gemini</span>
+              <span class="tool-chip">Photoshop</span>
+              <span class="tool-chip">Figma</span>
+              <span class="tool-chip">Claude</span>
+              <span class="tool-chip">GitHub</span>
+              <span class="tool-chip">Illustrator</span>
+            </div>
+          </div>
+          <div class="about__right">
+            <!-- ── Skill Clock Widget ── -->
+            <div class="skill-clock" id="skillClock">
+
+              <div class="skill-clock__label sc-p12">
+                <small class="sc-num">(01)</small>
+                <div class="sc-tag">Book &amp; Magazine<br>Layout</div>
+              </div>
+              <div class="skill-clock__label sc-p2">
+                <small class="sc-num">(02)</small>
+                <div class="sc-tag">Pattern<br>Design</div>
+              </div>
+              <div class="skill-clock__label sc-p4">
+                <small class="sc-num">(03)</small>
+                <div class="sc-tag">Poster<br>Design</div>
+              </div>
+              <div class="skill-clock__label sc-p6">
+                <small class="sc-num">(04)</small>
+                <div class="sc-tag">Merchandise<br>Design</div>
+              </div>
+              <div class="skill-clock__label sc-p8">
+                <small class="sc-num">(05)</small>
+                <div class="sc-tag">Pitchdeck<br>Design</div>
+              </div>
+              <div class="skill-clock__label sc-p10">
+                <small class="sc-num">(06)</small>
+                <div class="sc-tag">Print<br>Design</div>
+              </div>
+
+              <svg class="skill-clock__svg" id="clockSvg" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                <!-- 눈금 12개 (테두리 원 없음) -->
+                <g id="ticks"></g>
+                <!-- 시침 -->
+                <line id="handHour" x1="100" y1="100" x2="100" y2="42"
+                  stroke="#1A1A1A" stroke-width="4" stroke-linecap="round"/>
+                <!-- 분침 -->
+                <line id="handMin" x1="100" y1="100" x2="100" y2="22"
+                  stroke="#1A1A1A" stroke-width="2.5" stroke-linecap="round"/>
+                <!-- 초침 -->
+                <line id="handSec" x1="100" y1="115" x2="100" y2="18"
+                  stroke="#e03535" stroke-width="1.5" stroke-linecap="round"/>
+                <!-- 중심 피벗 (노란 사각형) -->
+                <rect x="93" y="93" width="14" height="14" fill="#FFFF5B"/>
+              </svg>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ── BENTO 이미지 팝업 ── -->
+  <div class="bento-popup" id="bentoPopup">
+    <div class="bento-popup__img" id="bentoPopupImg"></div>
+  </div>
+
+  <!-- ── CONTACT MODAL ── -->
+  <div class="contact-modal" id="contactModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="contactModalTitle">
+    <div class="contact-modal__overlay js-close-contact"></div>
+    <div class="contact-modal__box">
+      <button class="contact-modal__close js-close-contact" aria-label="닫기">✕</button>
+      <p class="eyebrow contact-modal__eyebrow">Contact</p>
+      <h2 class="contact-modal__title" id="contactModalTitle">이야기 나눠요</h2>
+      <p class="contact-modal__desc">면접 제의, 커피챗, 프로젝트 문의 모두 환영합니다.</p>
+      <form class="contact-form" id="contactForm" novalidate>
+        <div class="contact-form__row">
+          <div class="contact-form__field">
+            <label for="cf-name">이름</label>
+            <input type="text" id="cf-name" name="name" placeholder="홍길동" required>
+          </div>
+          <div class="contact-form__field">
+            <label for="cf-company">소속 / 회사</label>
+            <input type="text" id="cf-company" name="company" placeholder="머드스콘 (선택)">
+          </div>
+        </div>
+        <div class="contact-form__field">
+          <label for="cf-email">회신받을 이메일</label>
+          <input type="email" id="cf-email" name="email" placeholder="hello@example.com" required>
+        </div>
+        <div class="contact-form__field">
+          <label for="cf-message">전하실 말씀</label>
+          <textarea id="cf-message" name="message" rows="5" placeholder="어떤 이야기를 나누고 싶으신가요?" required></textarea>
+        </div>
+        <button type="submit" class="btn btn--primary contact-form__submit">메일 보내기 →</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ── CONTACT CTA ── -->
+  <div class="contact-cta">
+    <button class="contact-cta__bar js-open-contact">이야기 나눠요</button>
+  </div>
+
+  <!-- ── FOOTER ── -->
+  <footer class="footer">
+
+    <!-- 마키 텍스트 -->
+    <div class="footer__marquee-wrap">
+      <div class="footer__marquee-track">
+        <span>BRAND IDENTITY &nbsp;·&nbsp; VISUAL CONSISTENCY &nbsp;·&nbsp; AI IMAGE GENERATION &nbsp;·&nbsp; PHOTO RETOUCH &nbsp;·&nbsp; ART DIRECTION &nbsp;·&nbsp;</span>
+        <span>BRAND IDENTITY &nbsp;·&nbsp; VISUAL CONSISTENCY &nbsp;·&nbsp; AI IMAGE GENERATION &nbsp;·&nbsp; PHOTO RETOUCH &nbsp;·&nbsp; ART DIRECTION &nbsp;·&nbsp;</span>
+      </div>
+    </div>
+
+    <!-- 본문 -->
+    <div class="footer__body">
+      <div class="footer__contact">
+        <p class="footer__contact-label">Email</p>
+        <a href="mailto:delfi_chacha@naver.com" class="footer__contact-value">delfi_chacha@naver.com</a>
+      </div>
+      <nav class="footer__nav-cols">
+        <div class="footer__nav-col">
+          <a href="#food-ai">Food AI</a>
+          <a href="#process">Process</a>
+          <a href="#brand">Brand</a>
+        </div>
+        <div class="footer__nav-col">
+          <a href="#detail">Cases</a>
+          <a href="#about">About</a>
+          <a href="#" class="js-open-contact">Contact</a>
+        </div>
+      </nav>
+    </div>
+
+    <!-- 카피라이트 -->
+    <p class="footer__copy">MULT. — One identity, many forms.</p>
+
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
